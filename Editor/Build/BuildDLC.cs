@@ -9,8 +9,6 @@ using System.Globalization;
 using UnityEngine;
 using UnityEditor;
 using Newtonsoft.Json;
-using Ionic.Zip;
-//Ionic.Zipを使うには https://archive.codeplex.com/?p=dotnetzip からDotNetZip.dllが必要
 
 namespace KG
 {
@@ -595,7 +593,8 @@ namespace KG
 				return false;
 			}
 
-			using (var zip = new ZipFile(Encoding.UTF8))
+			//Ionic.Zipを使うには https://archive.codeplex.com/?p=dotnetzip からDotNetZip.dllが必要
+			using (var zip = new Ionic.Zip.ZipFile(Encoding.UTF8))
 			using (var jsonStream = new FileStream(paramJsonPath, FileMode.Open))
 			{
 				//param.jsonの追加
