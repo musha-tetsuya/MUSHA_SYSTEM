@@ -23,10 +23,12 @@ namespace KG
 		private bool isEditor => false;
 #endif
 
+#pragma warning disable CS0414
 		/// <summary>
 		/// IMEダイアログが閉じたときのコールバック
 		/// </summary>
 		private Action<bool, string> onCloseImeDialog = null;
+#pragma warning restore CS0414
 
 		/// <summary>
 		/// Start

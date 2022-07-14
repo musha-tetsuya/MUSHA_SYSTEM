@@ -54,6 +54,7 @@ namespace KG
 			DataSize = 2
 		}
 
+#pragma warning disable CS0414
 		/// <summary>
 		/// 手動セーブデータスロット最大数
 		/// </summary>
@@ -114,6 +115,7 @@ namespace KG
 		[SerializeField]
 		[Tooltip("StreamingAssets以下のパスを入れてください")]
 		private string ps5DefaultNewItemIconPath = "PS5SaveIcon.png";
+#pragma warning restore CS0414
 
 #if UNITY_PS4 || UNITY_PS5
 		/// <summary>
