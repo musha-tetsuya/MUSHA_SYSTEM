@@ -436,7 +436,11 @@ namespace KG
 		/// </summary>
 		public BuildApplicationPS4()
 		{
+#if UNITY_2021_2_OR_NEWER
+			this.buildOptions |= BuildOptions.SymlinkSources;
+#else
 			this.buildOptions |= BuildOptions.SymlinkLibraries;
+#endif
 		}
 
 		/// <summary>
